@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Detalle - {{ tema.nombre }}{% endblock %}
+
+{% block content %}
+<h2 class="text-center text-info mb-3">{{ tema.nombre }}</h2>
+<p class="text-center text-light mb-4">{{ tema.descripcion }}</p>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <!-- Carrusel de Bootstrap -->
+        <div id="carouselTema" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow-lg border border-info">
+                {% for imagen in tema.imagenes %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% static imagen %}" class="d-block w-100" alt="Imagen de {{ tema.nombre }}">
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTema" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTema" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="text-center mt-4">
+    <a href="{% url 'inicio:home' %}" class="btn btn-secondary">Volver al Inicio</a>
+</div>
+{% endblock %}

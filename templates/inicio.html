@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Listado de Temas{% endblock %}
+
+{% block content %}
+<h1 class="text-center text-info mb-4">Listado de Temas</h1>
+
+<div class="row justify-content-center">
+    {% for tema in temas %}
+    <div class="col-md-5 mb-4">
+        <!-- Uso de Card de Bootstrap -->
+        <div class="card bg-dark border-info h-100 shadow-lg">
+            <div class="card-body text-center">
+                <h5 class="card-title text-info fw-bold">{{ tema.nombre }}</h5>
+                <p class="card-text text-light">{{ tema.descripcion }}</p>
+                <a href="{% url 'inicio:detalle_tema' tema.id %}" class="btn btn-outline-info">Ver Imágenes</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
