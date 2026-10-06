@@ -14,7 +14,8 @@
             <div class="carousel-inner rounded shadow-lg border border-info">
                 {% for imagen in tema.imagenes %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <img src="{% static imagen %}" class="d-block w-100" alt="Imagen de {{ tema.nombre }}">
+                    <img src="{% static imagen %}" class="d-block w-100" alt="Imagen de {{ tema.nombre }}"
+                        style="height: 800px; object-fit: cover;">
                 </div>
                 {% endfor %}
             </div>

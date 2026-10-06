@@ -6,13 +6,13 @@ TEMAS = [
         'id': 1,
         'nombre': 'Videojuegos',
         'descripcion': 'Explora mundos virtuales épicos y setups de última generación con gráficos impresionantes.',
-        'imagenes': ['images/videojuegos_1.jpg', 'images/videojuegos_2.jpg']
+        'imagenes': ['images/videojuegos_1.jpg', 'images/videojuegos_2.jpg', 'images/videojuegos_3.jpg']
     },
     {
         'id': 2,
         'nombre': 'Tecnología',
         'descripcion': 'Descubre las tendencias del futuro, desde ciudades inteligentes hasta hardware avanzado.',
-        'imagenes': ['images/tecnologia_1.jpg', 'images/tecnologia_2.jpg']
+        'imagenes': ['images/tecnologia_1.jpg', 'images/tecnologia_2.jpg', 'images/tecnologia_3.jpg']
     }
 ]
 
